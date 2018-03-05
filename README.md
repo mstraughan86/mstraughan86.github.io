@@ -1,28 +1,26 @@
-> March, 2016: If you're on an old version of Jekyll Now and run into a) build warnings or b) syntax highlighting issues caused by [Jekyll 3 and GitHub Pages updates](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0), just :sparkles:[update your _config.yml](https://github.com/barryclark/jekyll-now/pull/445/files):sparkles: and you'll be set!
+# Jekyll Now Plus
 
-# Jekyll Now
-
-**Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))
+**Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll)).
 
 **Jekyll Now** makes it easier to create your Jekyll blog, by eliminating a lot of the up front setup.
 
-- You don't need to touch the command line
-- You don't need to install/configure ruby, rvm/rbenv, ruby gems :relaxed:
-- You don't need to install runtime dependencies like markdown processors, Pygments, etc
-- If you're on Windows, this will make setting up Jekyll a lot easier
-- It's easy to try out, you can just delete your forked repository if you don't like it
+- You don't need to touch the command line.
+- You don't need to install/configure ruby, rvm/rbenv, ruby gems :relaxed:.
+- You don't need to install runtime dependencies like markdown processors, Pygments, etc.
+- If you're on Windows, this will make setting up Jekyll a lot easier.
+- It's easy to try out, you can just delete your forked repository if you don't like it.
 
-In a few minutes you'll be set up with a minimal, responsive blog like the one below giving you more time to spend on writing epic blog posts!
+**Jekyll Now Plus** adds development environment instructions and allows for continuous modular customization.
 
-![Jekyll Now Theme Screenshot](/images/jekyll-now-theme-screenshot.jpg "Jekyll Now Theme Screenshot")
+- Development environment has already been setup! Check out your invitaion link for Cloud9 IDE access.
+- Docker development container has been created for you! Check out the instructions below.
+- Customizations to be added. See Roadmap below.
 
 ## Quick Start
 
-### Step 1) Fork Jekyll Now to your User Repository
+### Step 1) Fork Jekyll Now Plus to your User Repository
 
 Fork this repo, then rename the repository to yourgithubusername.github.io.
-
-Your Jekyll blog will often be viewable immediately at <https://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2)
 
 ![Step 1](/images/step1.gif "Step 1")
 
@@ -30,7 +28,7 @@ Your Jekyll blog will often be viewable immediately at <https://yourgithubuserna
 
 Enter your site name, description, avatar and many other options by editing the _config.yml file. You can easily turn on Google Analytics tracking, Disqus commenting and social icons here too.
 
-Making a change to _config.yml (or any file in your repository) will force GitHub Pages to rebuild your site with jekyll. Your rebuilt site will be viewable a few seconds later at <https://yourgithubusername.github.io> - if not, give it ten minutes as GitHub suggests and it'll appear soon
+Making a change to _config.yml (or any file in your repository) will force GitHub Pages to rebuild your site with jekyll. Your rebuilt site will be viewable at <https://yourgithubusername.github.io>.
 
 > There are 3 different ways that you can make changes to your blog's files:
 
@@ -48,7 +46,24 @@ Edit `/_posts/2014-3-3-Hello-World.md` to publish your first blog post. This [Ma
 
 > You can add additional posts in the browser on GitHub.com too! Just hit the + icon in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
 
-## Local Development
+## Development
+
+#### Jekyll Now Plus
+
+If you recieved the Cloud9 IDE invitation, here are the steps to follow when creating your new workspace:
+1. Workspace name can be whatever you want. Mine is ```My-Jekyll```.
+2. Description should be ```your-github-username/My-Jekyll```. Mine looks like ```mstraughan86/My-Jekyll```.
+3. Paste in your git clone ssh address ```git@github.com:mstraughan86/Jekyll-Now-Plus.git```.
+4. Choose ```Ruby``` for your template.
+5. Load up your workspace. In your terminal, execute the following commands:
+```
+gem install github-pages
+jekyll serve --host $IP --port $PORT --baseurl ''
+```
+6. You are setup to view your "local" environment by clicking on ```Preview > Preview RUnning Application```. It will open up a URL, something like ```https://my-jekyll-username.c9users.io```.
+7. Remember to close your server by pressing ```CTRL + C``` in the terminal.
+
+#### Local Development
 
 1. Install Jekyll and plug-ins in one fell swoop. `gem install github-pages` This mirrors the plug-ins used by GitHub Pages on your local machine including Jekyll, Sass, etc.
 2. Clone down your fork `git clone https://github.com/yourusername/yourusername.github.io.git`
