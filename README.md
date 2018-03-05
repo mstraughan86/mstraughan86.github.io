@@ -71,6 +71,14 @@ jekyll serve --host $IP --port $PORT --baseurl ''
 4. View your website at http://127.0.0.1:4000/
 5. Commit any changes and push everything to the master branch of your GitHub user repository. GitHub Pages will then rebuild and serve your website.
 
+#### Personal Development (Notes to Self)
+Github does not easily allow you to branch your own repository, so in order for me to ease development from production, I have manually cloned the reponsitory and set the upstream that points to ```https://github.com/mstraughan86/Jekyll-Now-Plus/```. This is not a true fork, beware of this caveat future-self. In order to pull down changes, do the following commands:
+```
+git fetch upstream
+git merge upstream/master
+git push
+```
+
 ## Roadmap
 - [ ] New base templates for different kinds of posts.
 - [ ] Create dockerfile for containerized development.
